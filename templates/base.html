@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block metahead %}
+    <meta charset="utf-8" />
+    {% endblock %}
+    {% block head %}
+    <title>{% block title %}{% endblock %} - [AppName]</title>
+    {% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="stylesheet" href="{{ static('reset.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='grid.css') }}" />
+    {% endblock %}
+    {% block favicon %}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    {% endblock %}
+    {% block scripts %}
+    <script src="{{ url_for('static', filename='html5.js') }}"></script>
+    <script src="{{ url_for('static', filename='jquery.js') }}"></script>
+    {% endblock %}
+    {% endblock %}
+</head>
+<body>
+    <section class="content">
+        {% block content %}{% endblock %}
+    </section>
+    <section class="footer">
+        {% block footer %}
+        &copy; Copyright 2011 by <a href="http://joeyespo.com/">Joe Esposito</a>.
+        {% endblock %}
+    </section>
+</body>
+</html>
