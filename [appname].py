@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
 """
-[AppName]
-By Joe Esposito
+[appname]
+[author]
 
-[Description]
+[description]
 """
 
 import os
